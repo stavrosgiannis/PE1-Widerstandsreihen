@@ -40,24 +40,55 @@ double compute_tolerance(int INPUT_E_SERIES) {
 	case 12:
 		return 0.10;
 	case 24:
-		return 0.5;
+		return 0.05;
 	case 48:
 		return 0.02;
 	case 96:
 		return 0.01;
 	case 192:
-		return 0.05;
+		return 0.005;
 	}
 
 	return 1;
 }
 
-int print_table(double INPUT_TABLE[192][3]) {
-	printf("---------------------");
-	for (int i = 0; i <= 192; i++) {
-		printf("| %.5f |\n", INPUT_TABLE[i][0]);
+int print_table(double INPUT_TABLE[192][3], int INPUT_E_SERIES, double INPUT_TOLERANCE) {
+	printf("\n\t+");
+	for (size_t i = 0; i < 44; i++)
+	{
+		printf("-");
 	}
-	printf("---------------------");
+	printf("+\n");
+
+	printf("\t|%28s - %-13d|\n", "Widerstandsreihe E", INPUT_E_SERIES);
+
+	printf("\t+");
+	for (size_t i = 0; i < 44; i++)
+	{
+		printf("-");
+	}
+	printf("+\n");
+
+	printf("\t|%8c%4.1f%s | %6s %7c %7c%4.1f%s |\n", '-', (INPUT_TOLERANCE * 100), "%", "R", '|', '+', (INPUT_TOLERANCE * 100), "%");
+
+	printf("\t+");
+	for (size_t i = 0; i < 44; i++)
+	{
+		printf("-");
+	}
+	printf("+\n");
+
+	for (int i = 0; i <= INPUT_E_SERIES; i++) {
+		printf("\t| %012.5f | %012.5f | %012.5f |\n", INPUT_TABLE[i][0], INPUT_TABLE[i][1], INPUT_TABLE[i][2]);
+	}
+
+	printf("\t+");
+	for (size_t i = 0; i < 44; i++)
+	{
+		printf("-");
+	}
+	printf("+\n");
+
 	return 0;
 }
 
@@ -77,7 +108,7 @@ int main()
 		printf("--------------------------------------------------------\n");
 
 		// lese gewuenschte E-Reihe und Dekade
-		int e_series = read_e_series();
+		double e_series = read_e_series();
 		int decade = read_decade();
 
 		// bestimme erste die Toleranz und dann die Werte der Tabelle -
@@ -88,17 +119,12 @@ int main()
 		//print_table(e_series, table);
 
 		for (int i = 0; i <= e_series; i++) {
-			printf("%0.5e\n", table[i][1] - (table[i][1] * tolerance));
+			table[i][1] = (pow(pow(10, 1 / e_series), i)) * (pow(10, decade));
 			table[i][0] = table[i][1] - (table[i][1] * tolerance);
-
-			printf("%0.5e\n", pow(pow(10, 1 / e_series), i) * pow(10, decade));
-			table[i][1] = pow(pow(10, 1 / e_series), i) * pow(10, decade);
-
-			printf("%0.5e\n", table[i][1] - (table[i][1] * tolerance));
 			table[i][2] = table[i][1] + (table[i][1] * tolerance);
 		}
 
-		if (print_table(e_series) != 0) {
+		if (print_table(table, e_series, tolerance) != 0) {
 			printf("[FEHLER] Die Tabelle konnte nicht angezeigt werden!");
 		}
 
