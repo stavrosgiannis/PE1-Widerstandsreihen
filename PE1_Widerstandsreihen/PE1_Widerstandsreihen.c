@@ -116,7 +116,6 @@ int main()
 		double table[192][3];
 		double tolerance = compute_tolerance(e_series);
 		//compute_values(e_series, decade, tolerance, table);
-		//print_table(e_series, table);
 
 		for (int i = 0; i <= e_series; i++) {
 			table[i][1] = (pow(pow(10, 1 / e_series), i)) * (pow(10, decade));
