@@ -79,7 +79,7 @@ int print_table(double INPUT_TABLE[192][3], int INPUT_E_SERIES, double INPUT_TOL
 	printf("+\n");
 
 	for (int i = 0; i <= INPUT_E_SERIES; i++) {
-		printf("\t| %012.5f | %012.5f | %012.5f |\n", INPUT_TABLE[i][0], INPUT_TABLE[i][1], INPUT_TABLE[i][2]);
+		printf("\t| %12.5f | %12.5f | %12.5f |\n", INPUT_TABLE[i][0], INPUT_TABLE[i][1], INPUT_TABLE[i][2]);
 	}
 
 	printf("\t+");
@@ -104,8 +104,8 @@ int main()
 {
 	do
 	{
-		printf("\n\nProgramm zur Berechnung von Widerstandsreihen\n");
-		printf("--------------------------------------------------------\n");
+		printf("\n\n\tProgramm zur Berechnung von Widerstandsreihen\n");
+		printf("\t--------------------------------------------------------\n");
 
 		// lese gewuenschte E-Reihe und Dekade
 		double e_series = read_e_series();
@@ -134,6 +134,6 @@ int main()
 		compute_coding(e_series, table[n][SET_VALUE], tolerance, coding);
 		printf("Die Farbcodierung dieses Widerstands ist: %s\n", coding);*/
 
-		printf("\n\nerneute Berechnung? (j/n)\n");
+		printf("\n\n\terneute Berechnung? (j/n)\n\t");
 	} while (getchar() == 'j' || getchar() == 'J');
 }
