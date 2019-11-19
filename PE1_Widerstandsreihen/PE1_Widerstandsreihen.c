@@ -4,6 +4,20 @@
 #include <stdio.h>
 #include <math.h>
 
+enum color_ring1
+{
+	black = 0,
+	brown = 1,
+	red = 2,
+	orange = 3,
+	yellow = 4,
+	green = 5,
+	blue = 6,
+	purple = 7,
+	grey = 8,
+	white = 9
+};
+
 // frage den Benutzer nach gewuenschter E-Reihe
 
 int read_e_series()
@@ -76,7 +90,7 @@ int print_table(double INPUT_TABLE[192][3], int INPUT_E_SERIES, double INPUT_TOL
 	}
 	printf("+\n");
 
-	for (int i = 0; i <= INPUT_E_SERIES; i++) {
+	for (int i = 0; i <= INPUT_E_SERIES - 1; i++) {
 		printf("\t| %12.5f | %12.5f | %12.5f |\n", INPUT_TABLE[i][0], INPUT_TABLE[i][1], INPUT_TABLE[i][2]);
 	}
 
@@ -88,6 +102,28 @@ int print_table(double INPUT_TABLE[192][3], int INPUT_E_SERIES, double INPUT_TOL
 	printf("+\n");
 
 	return 0;
+}
+
+unsigned int count(unsigned int i) {
+	unsigned int ret = 1;
+	while (i /= 10) ret++;
+	return ret;
+}
+
+int print_first_digit(double table[192][3]) {
+	int num = (int)table[23][1]; //for example
+	int dig = count(num);
+	int arr[100];
+	while (dig--) {
+		arr[dig] = num % 10;
+		num /= 10;
+		printf("\n%d", arr[dig]);
+
+		if (arr[dig] =
+	}
+
+	int size = sizeof(arr) / sizeof(arr[0]);//Method
+		printf("\nSize of Array: %d", size);
 }
 
 // Konstanten fuer den Zugriff in der Tabelle
@@ -136,6 +172,8 @@ int main()
 		/*int n = read_list_number(e_series);
 		compute_coding(e_series, table[n][SET_VALUE], tolerance, coding);
 		printf("Die Farbcodierung dieses Widerstands ist: %s\n", coding);*/
+
+		print_first_digit(table);
 
 		printf("\n\n\terneute Berechnung? (j/n)\n\t");
 	} while (getchar() == 'j' || getchar() == 'J');
