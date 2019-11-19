@@ -48,8 +48,6 @@ double compute_tolerance(int INPUT_E_SERIES) {
 	case 192:
 		return 0.005;
 	}
-
-	return 1;
 }
 
 int print_table(double INPUT_TABLE[192][3], int INPUT_E_SERIES, double INPUT_TOLERANCE) {
@@ -100,6 +98,15 @@ int print_table(double INPUT_TABLE[192][3], int INPUT_E_SERIES, double INPUT_TOL
 #define SET_VALUE 1
 #define UPPER_BOUND 2
 
+double compute_values(double e_series, int decade, double tolerance, double table[192][3]) {
+	for (int i = 0; i <= e_series; i++) {
+		table[i][1] = (pow(pow(10, 1 / e_series), i)) * (pow(10, decade));
+		table[i][0] = table[i][1] - (table[i][1] * tolerance);
+		table[i][2] = table[i][1] + (table[i][1] * tolerance);
+	}
+	return 0;
+}
+
 int main()
 {
 	do
@@ -115,12 +122,9 @@ int main()
 		// in jeder Zeile jeweils untere Grenze, Sollwert und obere Grenze
 		double table[192][3];
 		double tolerance = compute_tolerance(e_series);
-		//compute_values(e_series, decade, tolerance, table);
 
-		for (int i = 0; i <= e_series; i++) {
-			table[i][1] = (pow(pow(10, 1 / e_series), i)) * (pow(10, decade));
-			table[i][0] = table[i][1] - (table[i][1] * tolerance);
-			table[i][2] = table[i][1] + (table[i][1] * tolerance);
+		if (compute_values(e_series, decade, tolerance, table) != 0) {
+			printf("[FEHLER] Es gab ein Problem bei der Berechnung der Werte für die Tabelle!");
 		}
 
 		if (print_table(table, e_series, tolerance) != 0) {
