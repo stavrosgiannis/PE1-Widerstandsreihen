@@ -4,18 +4,19 @@
 #include <stdio.h>
 #include <math.h>
 
-enum color_ring1
-{
-	black = 0,
-	brown = 1,
-	red = 2,
-	orange = 3,
-	yellow = 4,
-	green = 5,
-	blue = 6,
-	purple = 7,
-	grey = 8,
-	white = 9
+double e_series;
+
+int color_ring1[] = {
+	/*black =*/ 0,
+	/*brown =*/ 1,
+	/*red =*/ 2,
+	/*orange =*/ 3,
+	/*yellow =*/ 4,
+	/*green =*/ 5,
+	/*blue =*/ 6,
+	/*purple =*/ 7,
+	/*grey = */8,
+	/*white =*/ 9
 };
 
 // frage den Benutzer nach gewuenschter E-Reihe
@@ -61,6 +62,67 @@ double compute_tolerance(int INPUT_E_SERIES) {
 		return 0.01;
 	case 192:
 		return 0.005;
+	}
+}
+
+char* check_color(int arr[100], int n, int e_series) {
+	if (e_series <= 24) {
+		for (size_t i = 0; i < 100; i++)
+		{
+			if (n == 0) {//color ring 1
+				switch (arr[i])
+				{
+				case 0: return("\tblack");
+				case 1:	return("\tbrown");
+				case 2:	return("\tred");
+				case 3:	return("\torange");
+				case 4:	return("\tyellow");
+				case 5:	return("\tgreen");
+				case 6:	return("\tblue");
+				case 7:	return("\tpurple");
+				case 8:	return("\tgrey");
+				case 9:	return("\twhite");
+				}
+			}
+			else if (n == 1) {//color ring 1
+				switch (arr[i])
+				{
+				case 0: return("\tblack");
+				case 1:	return("\tbrown");
+				case 2:	return("\tred");
+				case 3:	return("\torange");
+				case 4:	return("\tyellow");
+				case 5:	return("\tgreen");
+				case 6:	return("\tblue");
+				case 7:	return("\tpurple");
+				case 8:	return("\tgrey");
+				case 9:	return("\twhite");
+				}
+			}
+			else if (n == 2) {
+				switch (arr[i])
+				{
+				case 0: return("\tblack");
+				case 1:	return("\tbrown");
+				case 2:	return("\tred");
+				case 3:	return("\torange");
+				case 4:	return("\tyellow");
+				case 5:	return("\tgreen");
+				case 6:	return("\tblue");
+				case 8:	return("\tgold");
+				case 9:	return("\tsilver");
+				}
+			}
+			else if (n == 3) {
+				switch (arr[i])
+				{
+				case 1:	return("\tbrown");
+				case 2:	return("\tred");
+				case 8:	return("\tgold");
+				case 9:	return("\tsilver");
+				}
+			}
+		}
 	}
 }
 
@@ -111,19 +173,31 @@ unsigned int count(unsigned int i) {
 }
 
 int print_first_digit(double table[192][3]) {
-	int num = (int)table[23][1]; //for example
+	int num = (int)table[20][1]; //for example
 	int dig = count(num);
 	int arr[100];
+
 	while (dig--) {
 		arr[dig] = num % 10;
 		num /= 10;
-		printf("\n%d", arr[dig]);
+		printf("\n%d \tZahlenstelle: %d", arr[dig], dig + 1);
 
-		if (arr[dig] =
+		if (dig == 0/*Erste Ziffer*/) {
+			printf("\t%s", check_color(arr, 0, e_series));
+		}
+		else if (dig == 1/*Zweite Ziffer*/) {
+			printf("\t%s", check_color(arr, 1, e_series));
+		}
+		else if (dig == 2/*Zweite Ziffer*/) {
+			printf("\t%s", check_color(arr, 2, e_series));
+		}
+		else if (dig == 3/*Zweite Ziffer*/) {
+			printf("\t%s", check_color(arr, 3, e_series));
+		}
 	}
 
-	int size = sizeof(arr) / sizeof(arr[0]);//Method
-		printf("\nSize of Array: %d", size);
+	//int size = sizeof(arr) / sizeof(arr[0]);//Method
+	//printf("\nSize of Array: %d", size);
 }
 
 // Konstanten fuer den Zugriff in der Tabelle
@@ -136,9 +210,9 @@ int print_first_digit(double table[192][3]) {
 
 double compute_values(double e_series, int decade, double tolerance, double table[192][3]) {
 	for (int i = 0; i <= e_series; i++) {
-		table[i][1] = (pow(pow(10, 1 / e_series), i)) * (pow(10, decade));
-		table[i][0] = table[i][1] - (table[i][1] * tolerance);
-		table[i][2] = table[i][1] + (table[i][1] * tolerance);
+		table[i][SET_VALUE] = (pow(pow(10, 1 / e_series), i)) * (pow(10, decade));
+		table[i][LOWER_BOUND] = table[i][SET_VALUE] - (table[i][SET_VALUE] * tolerance);
+		table[i][UPPER_BOUND] = table[i][SET_VALUE] + (table[i][SET_VALUE] * tolerance);
 	}
 	return 0;
 }
