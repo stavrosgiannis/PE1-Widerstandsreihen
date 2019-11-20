@@ -21,7 +21,6 @@ int color_ring1[] = {
 };
 
 // frage den Benutzer nach gewuenschter E-Reihe
-
 int read_e_series()
 {
 	while (1)
