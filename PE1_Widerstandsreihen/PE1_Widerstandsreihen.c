@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <math.h>
 
+//Deklaration
 double e_series;
 
 int color_ring1[] = {
@@ -234,7 +235,7 @@ int main()
 		double tolerance = compute_tolerance(e_series);
 
 		if (compute_values(e_series, decade, tolerance, table) != 0) {
-			printf("[FEHLER] Es gab ein Problem bei der Berechnung der Werte für die Tabelle!");
+			printf("[FEHLER] Es gab ein Problem bei der Berechnung der Werte fï¿½r die Tabelle!");
 		}
 
 		if (print_table(table, e_series, tolerance) != 0) {
