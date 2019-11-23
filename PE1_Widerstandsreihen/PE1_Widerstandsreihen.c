@@ -17,6 +17,9 @@ int color_ring1[] = {
 	/*white =*/ 9
 };
 
+//index 0 = Ring1; index 1 = Ring2, ..
+char resistorRings[5][32];
+
 // frage den Benutzer nach gewuenschter E-Reihe
 
 int read_e_series()
@@ -72,32 +75,72 @@ char* check_color(int arr[100], int n, int INPUT_E_SERIES) {
 			{//color ring 1
 				switch (arr[i])
 				{
-				case 0: return("\tblack");
-				case 1:	return("\tbrown");
-				case 2:	return("\tred");
-				case 3:	return("\torange");
-				case 4:	return("\tyellow");
-				case 5:	return("\tgreen");
-				case 6:	return("\tblue");
-				case 7:	return("\tpurple");
-				case 8:	return("\tgrey");
-				case 9:	return("\twhite");
+				case 0:
+					strcpy(resistorRings[0], "black");
+					return("\tblack");
+				case 1:
+					strcpy(resistorRings[0], "brown");
+					return("\tbrown");
+				case 2:
+					strcpy(resistorRings[0], "red");
+					return("\tred");
+				case 3:
+					strcpy(resistorRings[0], "orange");
+					return("\torange");
+				case 4:
+					strcpy(resistorRings[0], "yellow");
+					return("\tyellow");
+				case 5:
+					strcpy(resistorRings[0], "green");
+					return("\tgreen");
+				case 6:
+					strcpy(resistorRings[0], "blue");
+					return("\tblue");
+				case 7:
+					strcpy(resistorRings[0], "purple");
+					return("\tpurple");
+				case 8:
+					strcpy(resistorRings[0], "grey");
+					return("\tgrey");
+				case 9:
+					strcpy(resistorRings[0], "white");
+					return("\twhite");
 				}
 			}
 			else if (n == 1)
 			{//color ring 2
 				switch (arr[i])
 				{
-				case 0: return("\tblack");
-				case 1:	return("\tbrown");
-				case 2:	return("\tred");
-				case 3:	return("\torange");
-				case 4:	return("\tyellow");
-				case 5:	return("\tgreen");
-				case 6:	return("\tblue");
-				case 7:	return("\tpurple");
-				case 8:	return("\tgrey");
-				case 9:	return("\twhite");
+				case 0:
+					strcpy(resistorRings[1], "black");
+					return("\tblack");
+				case 1:
+					strcpy(resistorRings[1], "brown");
+					return("\tbrown");
+				case 2:
+					strcpy(resistorRings[1], "red");
+					return("\tred");
+				case 3:
+					strcpy(resistorRings[1], "orange");
+					return("\torange");
+				case 4:
+					strcpy(resistorRings[1], "yellow");
+					return("\tyellow");
+				case 5:
+					strcpy(resistorRings[1], "green");
+					return("\tgreen");
+				case 6:
+					strcpy(resistorRings[1], "blue");
+					return("\tblue");
+				case 7:
+					strcpy(resistorRings[1], "purple");
+					return("\tpurple");
+				case 8:
+					strcpy(resistorRings[1], "grey");
+					return("\tgrey");
+				case 9:
+					strcpy(resistorRings[1], "white");
+					return("\twhite");
 				}
 			}
 		}
@@ -106,48 +149,108 @@ char* check_color(int arr[100], int n, int INPUT_E_SERIES) {
 			if (n == 0) {//color ring 1
 				switch (arr[i])
 				{
-				case 0: return("\tblack");
-				case 1:	return("\tbrown");
-				case 2:	return("\tred");
-				case 3:	return("\torange");
-				case 4:	return("\tyellow");
-				case 5:	return("\tgreen");
-				case 6:	return("\tblue");
-				case 7:	return("\tpurple");
-				case 8:	return("\tgrey");
-				case 9:	return("\twhite");
+				case 0:
+					strcpy(resistorRings[0], "black");
+					return("\tblack");
+				case 1:
+					strcpy(resistorRings[0], "brown");
+					return("\tbrown");
+				case 2:
+					strcpy(resistorRings[0], "red");
+					return("\tred");
+				case 3:
+					strcpy(resistorRings[0], "orange");
+					return("\torange");
+				case 4:
+					strcpy(resistorRings[0], "yellow");
+					return("\tyellow");
+				case 5:
+					strcpy(resistorRings[0], "green");
+					return("\tgreen");
+				case 6:
+					strcpy(resistorRings[0], "blue");
+					return("\tblue");
+				case 7:
+					strcpy(resistorRings[0], "purple");
+					return("\tpurple");
+				case 8:
+					strcpy(resistorRings[0], "grey");
+					return("\tgrey");
+				case 9:
+					strcpy(resistorRings[0], "white");
+					return("\twhite");
 				}
 			}
 			else if (n == 1)
 			{//color ring 2
 				switch (arr[i])
 				{
-				case 0: return("\tblack");
-				case 1:	return("\tbrown");
-				case 2:	return("\tred");
-				case 3:	return("\torange");
-				case 4:	return("\tyellow");
-				case 5:	return("\tgreen");
-				case 6:	return("\tblue");
-				case 7:	return("\tpurple");
-				case 8:	return("\tgrey");
-				case 9:	return("\twhite");
+				case 0:
+					strcpy(resistorRings[1], "black");
+					return("\tblack");
+				case 1:
+					strcpy(resistorRings[1], "brown");
+					return("\tbrown");
+				case 2:
+					strcpy(resistorRings[1], "red");
+					return("\tred");
+				case 3:
+					strcpy(resistorRings[1], "orange");
+					return("\torange");
+				case 4:
+					strcpy(resistorRings[1], "yellow");
+					return("\tyellow");
+				case 5:
+					strcpy(resistorRings[1], "green");
+					return("\tgreen");
+				case 6:
+					strcpy(resistorRings[1], "blue");
+					return("\tblue");
+				case 7:
+					strcpy(resistorRings[1], "purple");
+					return("\tpurple");
+				case 8:
+					strcpy(resistorRings[1], "grey");
+					return("\tgrey");
+				case 9:
+					strcpy(resistorRings[1], "white");
+					return("\twhite");
 				}
 			}
 			else if (n == 2)
 			{//color ring 3
 				switch (arr[i])
 				{
-				case 0: return("\tblack");
-				case 1:	return("\tbrown");
-				case 2:	return("\tred");
-				case 3:	return("\torange");
-				case 4:	return("\tyellow");
-				case 5:	return("\tgreen");
-				case 6:	return("\tblue");
-				case 7:	return("\tpurple");
-				case 8:	return("\tgrey");
-				case 9:	return("\twhite");
+				case 0:
+					strcpy(resistorRings[2], "black");
+					return("\tblack");
+				case 1:
+					strcpy(resistorRings[2], "brown");
+					return("\tbrown");
+				case 2:
+					strcpy(resistorRings[2], "red");
+					return("\tred");
+				case 3:
+					strcpy(resistorRings[2], "orange");
+					return("\torange");
+				case 4:
+					strcpy(resistorRings[2], "yellow");
+					return("\tyellow");
+				case 5:
+					strcpy(resistorRings[2], "green");
+					return("\tgreen");
+				case 6:
+					strcpy(resistorRings[2], "blue");
+					return("\tblue");
+				case 7:
+					strcpy(resistorRings[2], "purple");
+					return("\tpurple");
+				case 8:
+					strcpy(resistorRings[2], "grey");
+					return("\tgrey");
+				case 9:
+					strcpy(resistorRings[2], "white");
+					return("\twhite");
 				}
 			}
 		}
@@ -230,7 +333,7 @@ int print_digits(double table[192][3], double INPUT_E_SERIES) {
 				printf("\t%s", check_color(arr, 1, INPUT_E_SERIES));
 			}
 			else if (dig == 2/*Dritte Ziffer*/) {
-				printf("\t%s", check_color(arr, 1, INPUT_E_SERIES));
+				printf("\t%s", check_color(arr, 2, INPUT_E_SERIES));
 			}
 			else if (dig == 3/*Vierte Ziffer*/) {
 			}
@@ -246,15 +349,19 @@ char* getToleranceRing(int INPUT_E_SERIES) {
 	switch (INPUT_E_SERIES)
 	{
 	case 12:
+		strcpy(resistorRings[4], "silver");
 		return "\tsilver";
 	case 24:
+		strcpy(resistorRings[4], "yellow");
 		return "\tyellow";
 	case 48:
+		strcpy(resistorRings[4], "red");
 		return "\tred";
 	case 96:
+		strcpy(resistorRings[4], "brown");
 		return "\tbrown";
 	default:
-		break;
+		return "\tNONE";
 	}
 }
 
@@ -263,24 +370,31 @@ int getMultiplierRing(int INPUT_decade) {
 	switch (INPUT_decade)
 	{
 	case 0:
-		printf("\tBlack");
+		strcpy(resistorRings[3], "black");
+		printf("\tblack");
 		break;
 	case 1:
-		printf("\tBrown");
+		strcpy(resistorRings[3], "brown");
+		printf("\tbrown");
 		break;
 	case 2:
-		printf("\tRed");
+		strcpy(resistorRings[3], "red");
+		printf("\tred");
 		break;
 	case 3:
+		strcpy(resistorRings[3], "orange");
 		printf("\torange");
 		break;
 	case 4:
+		strcpy(resistorRings[3], "yellow");
 		printf("\tyellow");
 		break;
 	case 5:
+		strcpy(resistorRings[3], "green");
 		printf("\tgreen");
 		break;
 	case 6:
+		strcpy(resistorRings[3], "blue");
 		printf("\tblue");
 		break;
 	}
@@ -318,6 +432,15 @@ int test_function(int faktor) {
 	return 0;
 }
 
+void print_rings() {
+	printf("\n\tFarbcodierung:");
+	printf("\n\t---------------------------------------------------------------------------------\n");
+	for (int i = 0; i <= 5; i++) {
+		printf("\t|\t%s", resistorRings[i]);
+	}
+	printf("\n\t---------------------------------------------------------------------------------\n");
+}
+
 int main()
 {
 	do
@@ -353,6 +476,8 @@ int main()
 		getMultiplierRing(decade, e_series);
 
 		printf("%s", getToleranceRing(e_series));
+
+		print_rings();
 
 		printf("\n\n\terneute Berechnung? (j/n)\n\t");
 	} while (getchar() == 'j' || getchar() == 'J');
