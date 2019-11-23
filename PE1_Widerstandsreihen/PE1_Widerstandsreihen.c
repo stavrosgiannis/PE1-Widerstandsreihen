@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include <math.h>
 
 int color_ring1[] = {
@@ -64,6 +65,7 @@ double compute_tolerance(int INPUT_E_SERIES) {
 	case 192:
 		return 0.005;
 	}
+	return 0;
 }
 
 char* check_color(int arr[100], int n, int INPUT_E_SERIES) {
@@ -255,6 +257,7 @@ char* check_color(int arr[100], int n, int INPUT_E_SERIES) {
 			}
 		}
 	}
+	return 0;
 }
 
 int print_table(double INPUT_TABLE[192][3], int INPUT_E_SERIES, double INPUT_TOLERANCE) {
@@ -342,6 +345,7 @@ int print_digits(double table[192][3], double INPUT_E_SERIES) {
 
 	//int size = sizeof(arr) / sizeof(arr[0]);//Method
 	//printf("\nSize of Array: %d", size);
+	return 0;
 }
 
 char* getToleranceRing(int INPUT_E_SERIES) {
@@ -458,7 +462,7 @@ int main()
 		double tolerance = compute_tolerance(e_series);
 
 		if (compute_values(e_series, decade, tolerance, table) != 0) {
-			printf("[FEHLER] Es gab ein Problem bei der Berechnung der Werte für die Tabelle!");
+			printf("[FEHLER] Es gab ein Problem bei der Berechnung der Werte fï¿½r die Tabelle!");
 		}
 
 		if (print_table(table, e_series, tolerance) != 0) {
@@ -473,7 +477,7 @@ int main()
 
 		print_digits(table, e_series);
 
-		getMultiplierRing(decade, e_series);
+		getMultiplierRing(decade);
 
 		printf("%s", getToleranceRing(e_series));
 
