@@ -359,18 +359,18 @@ char* getToleranceRing(int INPUT_E_SERIES) {
 	{
 	case 12:
 		strcpy(resistorRings[4], "silver");
-		return "\tsilver";
+		return "silver";
 	case 24:
-		strcpy(resistorRings[4], "yellow");
-		return "\tyellow";
+		strcpy(resistorRings[4], "gold");
+		return "gold";
 	case 48:
 		strcpy(resistorRings[4], "red");
-		return "\tred";
+		return "red";
 	case 96:
 		strcpy(resistorRings[4], "brown");
-		return "\tbrown";
+		return "brown";
 	default:
-		return "\tNONE";
+		return "NONE";
 	}
 }
 
@@ -488,7 +488,5 @@ int main()
 		//printf("%s", getToleranceRing(e_series));
 
 		print_rings();
-
-		printf("\n\n\terneute Berechnung? (j/n)\n\t");
-	} while (getchar() == 'j' || getchar() == 'J');
+	} while (getchar() != '\n');
 }
