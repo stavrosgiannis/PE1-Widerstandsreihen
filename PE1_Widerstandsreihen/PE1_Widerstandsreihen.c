@@ -287,7 +287,7 @@ int print_table(double INPUT_TABLE[192][3], int INPUT_E_SERIES, double INPUT_TOL
 	printf("+\n");
 
 	for (int i = 0; i <= INPUT_E_SERIES - 1; i++) {
-		printf("\t| %12.5f | %12.5f | %12.5f |\n", INPUT_TABLE[i][0], INPUT_TABLE[i][1], INPUT_TABLE[i][2]);
+		printf("%d\t| %12.5f | %12.5f | %12.5f |\n", i, INPUT_TABLE[i][0], INPUT_TABLE[i][1], INPUT_TABLE[i][2]);
 	}
 
 	printf("\t+");
@@ -307,14 +307,19 @@ unsigned int count(unsigned int i) {
 }
 
 int print_digits(double table[192][3], double INPUT_E_SERIES) {
-	int num = (int)table[16][1]; //for example
+	int row = 0;
+	printf("\n\tBitte waehlen Sie eine Zeile fuer die Farbcodierung aus: ");
+	scanf("%d", &row);
+	while (getchar() != '\n');
+
+	int num = (int)table[row][1]; //for example
 	int dig = count(num);
 	int arr[100];
 
 	while (dig--) {
 		arr[dig] = num % 10;
 		num /= 10;
-		printf("\n%d \tZahlenstelle: %d", arr[dig], dig + 1);
+		printf("\n\t%d \tZahlenstelle: %d", arr[dig], dig + 1);
 		if (INPUT_E_SERIES <= 24) {
 			if (dig == 0/*Erste Ziffer*/) {
 				printf("\t%s", check_color(arr, 0, INPUT_E_SERIES));
@@ -349,7 +354,7 @@ int print_digits(double table[192][3], double INPUT_E_SERIES) {
 }
 
 char* getToleranceRing(int INPUT_E_SERIES) {
-	printf("\n\tTolerance Ring:");
+	//printf("\n\tTolerance Ring:");
 	switch (INPUT_E_SERIES)
 	{
 	case 12:
@@ -370,36 +375,36 @@ char* getToleranceRing(int INPUT_E_SERIES) {
 }
 
 int getMultiplierRing(int INPUT_decade) {
-	printf("\n\tMultiplier Ring:");
+	//printf("\n\tMultiplier Ring:");
 	switch (INPUT_decade)
 	{
 	case 0:
 		strcpy(resistorRings[3], "black");
-		printf("\tblack");
+		//printf("\tblack");
 		break;
 	case 1:
 		strcpy(resistorRings[3], "brown");
-		printf("\tbrown");
+		//printf("\tbrown");
 		break;
 	case 2:
 		strcpy(resistorRings[3], "red");
-		printf("\tred");
+		//printf("\tred");
 		break;
 	case 3:
 		strcpy(resistorRings[3], "orange");
-		printf("\torange");
+		//printf("\torange");
 		break;
 	case 4:
 		strcpy(resistorRings[3], "yellow");
-		printf("\tyellow");
+		//printf("\tyellow");
 		break;
 	case 5:
 		strcpy(resistorRings[3], "green");
-		printf("\tgreen");
+		//printf("\tgreen");
 		break;
 	case 6:
 		strcpy(resistorRings[3], "blue");
-		printf("\tblue");
+		//printf("\tblue");
 		break;
 	}
 
@@ -437,7 +442,7 @@ int test_function(int faktor) {
 }
 
 void print_rings() {
-	printf("\n\tFarbcodierung:");
+	printf("\n\n\tFarbcodierung:");
 	printf("\n\t---------------------------------------------------------------------------------\n");
 	for (int i = 0; i <= 5; i++) {
 		printf("\t|\t%s", resistorRings[i]);
@@ -479,7 +484,8 @@ int main()
 
 		getMultiplierRing(decade);
 
-		printf("%s", getToleranceRing(e_series));
+		getToleranceRing(e_series);
+		//printf("%s", getToleranceRing(e_series));
 
 		print_rings();
 
