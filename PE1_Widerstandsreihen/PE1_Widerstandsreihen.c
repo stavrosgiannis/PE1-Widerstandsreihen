@@ -79,34 +79,44 @@ char* check_color(int arr[100], int n, int INPUT_E_SERIES) {
 				{
 				case 0:
 					strcpy(resistorRings[0], "black");
-					return("\tblack");
+					return 0;
+					break;
 				case 1:
 					strcpy(resistorRings[0], "brown");
-					return("\tbrown");
+					return 0;
+					break;
 				case 2:
 					strcpy(resistorRings[0], "red");
-					return("\tred");
+					return 0;
+					break;
 				case 3:
 					strcpy(resistorRings[0], "orange");
-					return("\torange");
+					return 0;
+					break;
 				case 4:
 					strcpy(resistorRings[0], "yellow");
-					return("\tyellow");
+					return 0;
+					break;
 				case 5:
 					strcpy(resistorRings[0], "green");
-					return("\tgreen");
+					return 0;
+					break;
 				case 6:
 					strcpy(resistorRings[0], "blue");
-					return("\tblue");
+					return 0;
+					break;
 				case 7:
 					strcpy(resistorRings[0], "purple");
-					return("\tpurple");
+					return 0;
+					break;
 				case 8:
 					strcpy(resistorRings[0], "grey");
-					return("\tgrey");
+					return 0;
+					break;
 				case 9:
 					strcpy(resistorRings[0], "white");
-					return("\twhite");
+					return 0;
+					break;
 				}
 			}
 			else if (n == 1)
@@ -115,34 +125,44 @@ char* check_color(int arr[100], int n, int INPUT_E_SERIES) {
 				{
 				case 0:
 					strcpy(resistorRings[1], "black");
-					return("\tblack");
+					return 0;
+					break;
 				case 1:
 					strcpy(resistorRings[1], "brown");
-					return("\tbrown");
+					return 0;
+					break;
 				case 2:
 					strcpy(resistorRings[1], "red");
-					return("\tred");
+					return 0;
+					break;
 				case 3:
 					strcpy(resistorRings[1], "orange");
-					return("\torange");
+					return 0;
+					break;
 				case 4:
 					strcpy(resistorRings[1], "yellow");
-					return("\tyellow");
+					return 0;
+					break;
 				case 5:
 					strcpy(resistorRings[1], "green");
-					return("\tgreen");
+					return 0;
+					break;
 				case 6:
 					strcpy(resistorRings[1], "blue");
-					return("\tblue");
+					return 0;
+					break;
 				case 7:
 					strcpy(resistorRings[1], "purple");
-					return("\tpurple");
+					return 0;
+					break;
 				case 8:
 					strcpy(resistorRings[1], "grey");
-					return("\tgrey");
+					return 0;
+					break;
 				case 9:
 					strcpy(resistorRings[1], "white");
-					return("\twhite");
+					return 0;
+					break;
 				}
 			}
 		}
@@ -153,34 +173,44 @@ char* check_color(int arr[100], int n, int INPUT_E_SERIES) {
 				{
 				case 0:
 					strcpy(resistorRings[0], "black");
-					return("\tblack");
+
+					break;
 				case 1:
 					strcpy(resistorRings[0], "brown");
-					return("\tbrown");
+					return 0;
+					break;
 				case 2:
 					strcpy(resistorRings[0], "red");
-					return("\tred");
+					return 0;
+					break;
 				case 3:
 					strcpy(resistorRings[0], "orange");
-					return("\torange");
+					return 0;
+					break;
 				case 4:
 					strcpy(resistorRings[0], "yellow");
-					return("\tyellow");
+					return 0;
+					break;
 				case 5:
 					strcpy(resistorRings[0], "green");
-					return("\tgreen");
+					return 0;
+					break;
 				case 6:
 					strcpy(resistorRings[0], "blue");
-					return("\tblue");
+					return 0;
+					break;
 				case 7:
 					strcpy(resistorRings[0], "purple");
-					return("\tpurple");
+					return 0;
+					break;
 				case 8:
 					strcpy(resistorRings[0], "grey");
-					return("\tgrey");
+					return 0;
+					break;
 				case 9:
 					strcpy(resistorRings[0], "white");
-					return("\twhite");
+					return 0;
+					break;
 				}
 			}
 			else if (n == 1)
@@ -189,34 +219,44 @@ char* check_color(int arr[100], int n, int INPUT_E_SERIES) {
 				{
 				case 0:
 					strcpy(resistorRings[1], "black");
-					return("\tblack");
+					return 0;
+					break;
 				case 1:
 					strcpy(resistorRings[1], "brown");
-					return("\tbrown");
+					return 0;
+					break;
 				case 2:
 					strcpy(resistorRings[1], "red");
-					return("\tred");
+					return 0;
+					break;
 				case 3:
 					strcpy(resistorRings[1], "orange");
-					return("\torange");
+					return 0;
+					break;
 				case 4:
 					strcpy(resistorRings[1], "yellow");
-					return("\tyellow");
+					return 0;
+					break;
 				case 5:
 					strcpy(resistorRings[1], "green");
-					return("\tgreen");
+					return 0;
+					break;
 				case 6:
 					strcpy(resistorRings[1], "blue");
-					return("\tblue");
+					return 0;
+					break;
 				case 7:
 					strcpy(resistorRings[1], "purple");
-					return("\tpurple");
+					return 0;
+					break;
 				case 8:
 					strcpy(resistorRings[1], "grey");
-					return("\tgrey");
+					return 0;
+					break;
 				case 9:
 					strcpy(resistorRings[1], "white");
-					return("\twhite");
+					return 0;
+					break;
 				}
 			}
 			else if (n == 2)
@@ -225,39 +265,48 @@ char* check_color(int arr[100], int n, int INPUT_E_SERIES) {
 				{
 				case 0:
 					strcpy(resistorRings[2], "black");
-					return("\tblack");
+					return 0;
+					break;
 				case 1:
 					strcpy(resistorRings[2], "brown");
-					return("\tbrown");
+					return 0;
+					break;
 				case 2:
 					strcpy(resistorRings[2], "red");
-					return("\tred");
+					return 0;
+					break;
 				case 3:
 					strcpy(resistorRings[2], "orange");
-					return("\torange");
+					return 0;
+					break;
 				case 4:
 					strcpy(resistorRings[2], "yellow");
-					return("\tyellow");
+					return 0;
+					break;
 				case 5:
 					strcpy(resistorRings[2], "green");
-					return("\tgreen");
+					return 0;
+					break;
 				case 6:
 					strcpy(resistorRings[2], "blue");
-					return("\tblue");
+					return 0;
+					break;
 				case 7:
 					strcpy(resistorRings[2], "purple");
-					return("\tpurple");
+					return 0;
+					break;
 				case 8:
 					strcpy(resistorRings[2], "grey");
-					return("\tgrey");
+					return 0;
+					break;
 				case 9:
 					strcpy(resistorRings[2], "white");
-					return("\twhite");
+					return 0;
+					break;
 				}
 			}
 		}
 	}
-	return 0;
 }
 
 int print_table(double INPUT_TABLE[192][3], int INPUT_E_SERIES, double INPUT_TOLERANCE) {
@@ -287,7 +336,7 @@ int print_table(double INPUT_TABLE[192][3], int INPUT_E_SERIES, double INPUT_TOL
 	printf("+\n");
 
 	for (int i = 0; i <= INPUT_E_SERIES - 1; i++) {
-		printf("%d\t| %12.5f | %12.5f | %12.5f |\n", i, INPUT_TABLE[i][0], INPUT_TABLE[i][1], INPUT_TABLE[i][2]);
+		printf("%d\t| %12.5f | %12.5f | %12.5f |\n", i + 1, INPUT_TABLE[i][0], INPUT_TABLE[i][1], INPUT_TABLE[i][2]);
 	}
 
 	printf("\t+");
@@ -306,27 +355,26 @@ unsigned int count(unsigned int i) {
 	return ret;
 }
 
-int print_digits(double table[192][3], double INPUT_E_SERIES) {
+int getDigits(double table[192][3], double INPUT_E_SERIES) {
 	int row = 0;
 	printf("\n\tBitte waehlen Sie eine Zeile fuer die Farbcodierung aus: ");
 	scanf("%d", &row);
 	while (getchar() != '\n');
 
-	int num = (int)table[row][1]; //for example
+	int num = (int)table[row - 1][1]; //for example
 	int dig = count(num);
 	int arr[100];
 
 	while (dig--) {
 		arr[dig] = num % 10;
 		num /= 10;
-		printf("\n\t%d \tZahlenstelle: %d", arr[dig], dig + 1);
+		//printf("\n\t%d \tZahlenstelle: %d", arr[dig], dig + 1);
 		if (INPUT_E_SERIES <= 24) {
 			if (dig == 0/*Erste Ziffer*/) {
-				printf("\t%s", check_color(arr, 0, INPUT_E_SERIES));
+				check_color(arr, 0, INPUT_E_SERIES);
 			}
 			else if (dig == 1/*Zweite Ziffer*/) {
-				printf("\t%s", check_color(arr, 1, INPUT_E_SERIES));
-				/*test_function(arr[1]);*/
+				check_color(arr, 1, INPUT_E_SERIES);
 			}
 			else if (dig == 2/*Dritte Ziffer*/) {
 			}
@@ -335,13 +383,13 @@ int print_digits(double table[192][3], double INPUT_E_SERIES) {
 		}
 		else if (INPUT_E_SERIES > 24) {
 			if (dig == 0/*Erste Ziffer*/) {
-				printf("\t%s", check_color(arr, 0, INPUT_E_SERIES));
+				check_color(arr, 0, INPUT_E_SERIES);
 			}
 			else if (dig == 1/*Zweite Ziffer*/) {
-				printf("\t%s", check_color(arr, 1, INPUT_E_SERIES));
+				check_color(arr, 1, INPUT_E_SERIES);
 			}
 			else if (dig == 2/*Dritte Ziffer*/) {
-				printf("\t%s", check_color(arr, 2, INPUT_E_SERIES));
+				check_color(arr, 2, INPUT_E_SERIES);
 			}
 			else if (dig == 3/*Vierte Ziffer*/) {
 			}
@@ -354,61 +402,53 @@ int print_digits(double table[192][3], double INPUT_E_SERIES) {
 }
 
 char* getToleranceRing(int INPUT_E_SERIES) {
-	//printf("\n\tTolerance Ring:");
 	switch (INPUT_E_SERIES)
 	{
 	case 12:
 		strcpy(resistorRings[4], "silver");
-		return "silver";
+		break;
 	case 24:
 		strcpy(resistorRings[4], "gold");
-		return "gold";
+		break;
 	case 48:
 		strcpy(resistorRings[4], "red");
-		return "red";
+		break;
 	case 96:
 		strcpy(resistorRings[4], "brown");
-		return "brown";
+		break;
 	default:
-		return "NONE";
+		strcpy(resistorRings[4], "NONE");
+		break;
 	}
 }
 
 int getMultiplierRing(int INPUT_decade) {
-	//printf("\n\tMultiplier Ring:");
 	switch (INPUT_decade)
 	{
 	case 0:
 		strcpy(resistorRings[3], "black");
-		//printf("\tblack");
 		break;
 	case 1:
 		strcpy(resistorRings[3], "brown");
-		//printf("\tbrown");
 		break;
 	case 2:
 		strcpy(resistorRings[3], "red");
-		//printf("\tred");
 		break;
 	case 3:
 		strcpy(resistorRings[3], "orange");
-		//printf("\torange");
 		break;
 	case 4:
 		strcpy(resistorRings[3], "yellow");
-		//printf("\tyellow");
 		break;
 	case 5:
 		strcpy(resistorRings[3], "green");
-		//printf("\tgreen");
 		break;
 	case 6:
 		strcpy(resistorRings[3], "blue");
-		//printf("\tblue");
 		break;
+	default:
+		return 0;
 	}
-
-	return 0;
 }
 
 // Konstanten fuer den Zugriff in der Tabelle
@@ -428,25 +468,20 @@ double compute_values(double e_series, int decade, double tolerance, double tabl
 	return 0;
 }
 
-int test_function(int faktor) {
-	double runde_zahl_auf = faktor;
-	double neue_runde_zahl = runde_zahl_auf;
-
-	while (neue_runde_zahl <= runde_zahl_auf + 1)
-	{
-		neue_runde_zahl = neue_runde_zahl + 0.00001;
-	}
-
-	printf("\n\t%d", (int)neue_runde_zahl);
-	return 0;
-}
-
 void print_rings() {
 	printf("\n\n\tFarbcodierung:");
+
 	printf("\n\t---------------------------------------------------------------------------------\n");
-	for (int i = 0; i <= 5; i++) {
-		printf("\t|\t%s", resistorRings[i]);
+	for (int i = 0; i <= 4; i++) {
+		if (resistorRings[i] == "") {
+			printf("\t|\t%s", "NONE");
+		}
+		else
+		{
+			printf("\t|\t%s", resistorRings[i]);
+		}
 	}
+	printf("\t|");
 	printf("\n\t---------------------------------------------------------------------------------\n");
 }
 
@@ -454,6 +489,12 @@ int main()
 {
 	do
 	{
+		//Reseting array
+		for (size_t i = 0; i < 5; i++)
+		{
+			strcpy(resistorRings[i], "NONE");
+		}
+
 		printf("\n\n\tProgramm zur Berechnung von Widerstandsreihen\n");
 		printf("\t--------------------------------------------------------\n");
 
@@ -467,7 +508,7 @@ int main()
 		double tolerance = compute_tolerance(e_series);
 
 		if (compute_values(e_series, decade, tolerance, table) != 0) {
-			printf("[FEHLER] Es gab ein Problem bei der Berechnung der Werte f�r die Tabelle!");
+			printf("[FEHLER] Es gab ein Problem bei der Berechnung der Werte fuer die Tabelle!");
 		}
 
 		if (print_table(table, e_series, tolerance) != 0) {
@@ -475,17 +516,20 @@ int main()
 		}
 
 		// bestimme die Farbcodierung eines gewaehlten Widerstands
-		char coding[80];
+		//char coding[80];
 		/*int n = read_list_number(e_series);
 		compute_coding(e_series, table[n][SET_VALUE], tolerance, coding);
 		printf("Die Farbcodierung dieses Widerstands ist: %s\n", coding);*/
 
-		print_digits(table, e_series);
+		if (getDigits(table, e_series) != 0) {
+			printf("[FEHLER] Die Ziffern konnten nicht angezeigt werden!");
+		}
 
-		getMultiplierRing(decade);
+		if (getMultiplierRing(decade) == 0) {
+			printf("[FEHLER] Der Multiplier konnten nicht berechnet werden!");
+		}
 
 		getToleranceRing(e_series);
-		//printf("%s", getToleranceRing(e_series));
 
 		print_rings();
 	} while (getchar() != '\n');
